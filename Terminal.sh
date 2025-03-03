@@ -1,1 +1,1 @@
-qterminal -w ~/Documents -e python3 ~/workingTerminal.py
+qterminal -w ~/Documents -e python3 ~/workingTerminal/workingTerminal.py
