@@ -33,3 +33,8 @@ pyautogui.keyDown('shift')
 pyautogui.press('d')   
 pyautogui.keyUp('ctrl')   
 pyautogui.keyUp('shift')
+
+#switch to tab1
+pyautogui.keyDown('alt')  
+pyautogui.press('1')   
+pyautogui.keyUp('alt')
