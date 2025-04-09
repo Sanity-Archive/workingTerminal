@@ -1,44 +1,12 @@
 import pyautogui
 
 #tab 1
-#has to be run twice, because one tab will be closed after python finishes
 pyautogui.keyDown('ctrl')  
 pyautogui.keyDown('shift')
-pyautogui.press('t')   
+pyautogui.press('t')
 pyautogui.keyUp('ctrl')   
 pyautogui.keyUp('shift')
-pyautogui.keyDown('ctrl')  
-pyautogui.keyDown('shift')
-pyautogui.press('t')   
-pyautogui.keyUp('ctrl')   
-pyautogui.keyUp('shift')
-
-#tab2
-pyautogui.keyDown('ctrl')  
-pyautogui.keyDown('shift')
-pyautogui.press('t')   
-pyautogui.keyUp('ctrl')   
-pyautogui.keyUp('shift')
-
-#tab3 with split screen
-pyautogui.keyDown('ctrl') 
-pyautogui.keyDown('shift')
-pyautogui.press('r')      
-pyautogui.keyUp('ctrl')   
-pyautogui.keyUp('shift')
-
-pyautogui.keyDown('ctrl')  
-pyautogui.keyDown('shift')
-pyautogui.press('d')   
-pyautogui.keyUp('ctrl')   
-pyautogui.keyUp('shift')
-
-#switch to tab1
-pyautogui.keyDown('alt')  
-pyautogui.press('2')   
-pyautogui.keyUp('alt')
-
-#rename tab1
+#rename tab2
 pyautogui.keyDown('alt')  
 pyautogui.keyDown('shift')
 pyautogui.press('s')   
@@ -47,11 +15,12 @@ pyautogui.keyUp('shift')
 pyautogui.write('tun0')
 pyautogui.press('enter')
 
-#switch to tab2
-pyautogui.keyDown('alt')  
-pyautogui.press('3')   
-pyautogui.keyUp('alt')
-
+#tab 2
+pyautogui.keyDown('ctrl')  
+pyautogui.keyDown('shift')
+pyautogui.press('t')
+pyautogui.keyUp('ctrl')   
+pyautogui.keyUp('shift')
 #rename tab2
 pyautogui.keyDown('alt')  
 pyautogui.keyDown('shift')
@@ -60,12 +29,28 @@ pyautogui.keyUp('alt')
 pyautogui.keyUp('shift')
 pyautogui.write('enum')
 pyautogui.press('enter')
+#start the tmux session for tab2
+pyautogui.write('tmux')
+pyautogui.press('enter')
+#rename the current session
+pyautogui.write('tmux rename-session enum')
+pyautogui.press('enter')
+pyautogui.write('clear')
+pyautogui.press('enter')
+#start logging
+pyautogui.keyDown('ctrl')
+pyautogui.press('b')
+pyautogui.keyUp('ctrl')
+pyautogui.keyDown('shift')
+pyautogui.press('p')
+pyautogui.keyUp('shift')
 
-#switch to tab3
-pyautogui.keyDown('alt')  
-pyautogui.press('4')   
-pyautogui.keyUp('alt')
-
+#tab3
+pyautogui.keyDown('ctrl')  
+pyautogui.keyDown('shift')
+pyautogui.press('t')   
+pyautogui.keyUp('ctrl')   
+pyautogui.keyUp('shift')
 #rename tab3
 pyautogui.keyDown('alt')  
 pyautogui.keyDown('shift')
@@ -74,3 +59,46 @@ pyautogui.keyUp('alt')
 pyautogui.keyUp('shift')
 pyautogui.write('attack')
 pyautogui.press('enter')
+#start the tmux session for tab3
+pyautogui.write('tmux')
+pyautogui.press('enter')
+#rename the current session
+pyautogui.write('tmux rename-session offense')
+pyautogui.press('enter')
+pyautogui.write('clear')
+pyautogui.press('enter')
+#start logging
+pyautogui.keyDown('ctrl')
+pyautogui.press('b')
+pyautogui.keyUp('ctrl')
+pyautogui.keyDown('shift')
+pyautogui.press('p')
+pyautogui.keyUp('shift')
+#vertical split (qwertz)
+pyautogui.keyDown('ctrl')
+pyautogui.press('b')
+pyautogui.keyUp('ctrl')
+pyautogui.keyDown('shift')
+pyautogui.press('5')
+pyautogui.keyUp('shift')
+#start logging
+pyautogui.keyDown('ctrl')
+pyautogui.press('b')
+pyautogui.keyUp('ctrl')
+pyautogui.keyDown('shift')
+pyautogui.press('p')
+pyautogui.keyUp('shift')
+#horizontal split (qwertz)
+pyautogui.keyDown('ctrl')
+pyautogui.press('b')
+pyautogui.keyUp('ctrl')
+pyautogui.keyDown('shift')
+pyautogui.press('2')
+pyautogui.keyUp('shift')
+#start logging
+pyautogui.keyDown('ctrl')
+pyautogui.press('b')
+pyautogui.keyUp('ctrl')
+pyautogui.keyDown('shift')
+pyautogui.press('p')
+pyautogui.keyUp('shift')
